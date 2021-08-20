@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600&display=swap');
+/* font-family: 'IBM Plex Sans', sans-serif; */
+:root{
+    --color:#aee1ff;
+}
+*{
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    /* transition: all .2s linear; */
+}
+*::selection{
+    background: var(--color);
+}
+html{
+    font-size: 90%;
+   overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width:1rem;
+}
+html::-webkit-scrollbar-track{
+    background:#0C2D48;
+}
+html::-webkit-scrollbar-thumb{
+    background:var(--color);
+}
+body{
+    background: #B1D4E0;
+    overflow-x: hidden;
+    padding-left:23rem;
+}
+
+section{
+    min-height:100vh;
+    padding:1rem;
+}
+.btn{
+    background: #2E8BC0;
+    padding:0.8rem 2rem;
+    border-radius:10rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    
+}
+.btn i{
+    font-size:1.2rem;
+    padding-left:0.8rem;
+}
+.btn:hover{
+    background: #145DA0;
+}
+header{
+    display:flex;
+    flex-flow: column;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:#0C2D48;
+    height:100%;
+    width:23rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+header .profile img{
+    width: 12rem;
+    height:12rem;
+    border-radius:50%;
+    margin-bottom: 0.6rem;
+    border:0.5rem solid #175873;
+}
+header .profile .name{
+    font-size: 1.8rem;
+    color:#fff;
+}
+header .profile .user-intro{
+    font-size: 1.1rem;
+    color:#fff;
+    margin-top:8px;
+}
+header .navbar{
+    width: 100%;
+}
+header .navbar ul{
+    list-style:none;
+    padding:1rem 3rem;
+    
+}
+header .navbar ul li a{
+    display:block;
+    padding:0.7rem;
+    margin: 1.4rem 0;
+    background:#2E8BC0;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5rem;
+}
+header .navbar ul li a:hover{
+    background: #145DA0;
+}
+#menubar{
+    position:fixed;
+    top: 2rem;
+    right: 2rem;
+    background:#145DA0;
+    color:#2E8BC0;
+    cursor: pointer;
+    font-size:1rem;
+    padding:1rem 1.5rem;
+    z-index:1000;
+    display:none;
+    border-radius:8rem;
+}
+
+.home{
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    padding:0 10rem;
+}
+.home h3{
+    font-size: 2rem;
+    color: #2E8BC0;
+}
+.home h1{
+    font-size: 3rem;
+    color: #2E8BC0;
+}
+.home h1 span{
+    font-size: 3rem;
+    color: #145DA0;
+}
+.home p{
+    font-size: 1rem;
+    color: #145DA0;
+    padding:1rem 0 2rem 0;
+    line-height:20px;
+    word-spacing:1px;
+    letter-spacing:0.7px;
+    text-align: justify;
+}
+/*///////////////////////////////About me section /////////////////////////////////*/
+.aboutme{
+    padding:0 3rem;
+}
+.aboutme .info{
+    margin-top:3rem;
+    padding:0 1.5rem;
+ }
+ .aboutme .info h3{
+     font-size:1.3rem;
+     font-weight: normal;
+     padding: 0.8rem 0;
+     color: #145DA0;
+     line-height: 1;
+     letter-spacing:1px;
+ }
+ .aboutme .info p{
+     font-size: 1.1rem;
+     color: #145DA0;
+     padding:1rem 0 2rem 0;
+     line-height:1.6;
+     word-spacing:1px;
+     letter-spacing:0.7px;
+     text-align: justify;
+     
+ } 
+ .aboutme h3 span{
+     font-weight: bold;
+ }
+ .aboutme .info .btn{
+     margin-top: 1.6rem;
+ }
+.aboutme .e-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+}
+.aboutme .e-container .boxes{
+    width: 20rem;
+    margin-top:4rem;
+    background: #2E8BC0;
+    box-shadow: 5px 5px 10px 3px #fff;
+    position: relative;
+    border-radius:1.5rem;
+    padding:2.3rem;
+    border-radius: 35px;
+    border-top: 0.9rem solid #145DA0;
+    transition-duration: 500ms;
+    cursor: pointer;
+    border-right:3px solid #145DA0;
+    border-left:3px solid #145DA0;
+    border-bottom:3px solid #145DA0;
+}
+.aboutme .e-container .boxes:hover{
+    margin-top:1.8rem;
+}
+.aboutme .e-container .boxes h3{
+    font-size:1.3rem;
+    color: #fff;
+    padding-top:0.5rem;
+}
+.aboutme .e-container .boxes span{
+    color: #fff;
+    font-weight: bold;
+}
+.aboutme .e-container .boxes p{
+    font-size:1rem;
+    color: #0C2D48;
+    line-height:20px;
+    word-spacing:1px;
+    letter-spacing:0.7px;
+    font-weight: bold;
+    padding-top:0.5rem;
+}
+.aboutme .e-container .boxes i{
+    font-size:1.5rem;
+    background: #145DA0;
+    color: #fff;
+    border-radius: 50%;
+    padding:0.9rem;
+    position:absolute;
+    top:-19%;
+    left: 44%;
+}
+/*******************About me*********************/
+.heading{
+    font-size: 2rem;
+    padding:1rem 2rem;
+    text-align: center;
+    /* color: #2B7C85; */
+    color:#2E8BC0;
+    border-bottom:0.2rem solid #2E8BC0 ;
+}
+.myskils{
+    margin-top: 3rem;
+    padding:0 3rem;
+}
+/* .aboutme .row{
+    
+} */
+.myskils .counter{
+    margin-top:3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.myskils .counter .box{
+    height:9rem;
+    width: 14rem;
+    background:#2E8BC0;
+    box-shadow: 5px 5px 10px 3px #fff;
+    text-align: center;
+    padding:1.5rem;
+    margin: 1rem;
+    color: #fff;
+    border-radius: 1rem;
+    border: 3px solid #145DA0;
+    transition-duration: 500ms;
+    cursor: pointer;
+    position: relative;
+}
+.myskils .counter .box:hover{
+    margin-top:1.8rem;
+}
+.myskils .counter .box i{
+    font-size: 4.5rem;
+    color: #0C2D48;
+    text-align: center;
+    display: block;
+}
+.myskils .counter .box span{
+    display: block;
+    font-size: 1rem;
+    color: #0C2D48;
+    letter-spacing:0.9px;
+}
+
+
+/****************** projects***************** */
+.projects{
+    padding:0 3rem;
+}
+.projects .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.projects i{
+    font-size: 2.2rem;
+    color: #2E8BC0;
+    padding-right: 0.7rem;
+}
+.projects h3{
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top:5rem;
+    color: #293B5F;
+    cursor: pointer;
+    font-weight:lighter;
+}
+.projects .container .boxes{
+    margin-top: 2rem;
+    height: 10  rem;
+    width: 30rem;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition-duration: 300ms;
+    cursor: pointer;
+} 
+.projects .container .boxes img{
+    height: 100%;
+    width:100%;
+    border:0.3rem solid #145DA0;
+}
+.projects .container .boxes:hover{
+    /* transform:scale(1.1); */
+    height: 12  rem;
+    width: 32rem;
+    border:none;
+}
+/*****************contact us******************/
+::placeholder{
+    color: #B1D4E0;
+}
+.contact{
+    padding:0 3rem;
+    padding-bottom: 5rem;
+}
+.contact .row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact .row .myinfo{
+    flex:1;
+    padding:3rem;
+    padding-bottom: 0;
+    margin: 2rem 0;
+}
+.contact .row .myinfo .s-icon{
+    /* background: chartreuse; */
+    margin-top:1rem;
+}
+.contact .row .myinfo .s-icon i{
+    font-size: 1.3rem;
+    color: #293B5F;
+}
+.contact .row .contact-form {
+    flex: 1;
+    padding:2rem;
+    margin: 2rem;
+    margin-bottom: 1rem;
+}
+.contact .row .contact-form .maps{
+    padding:0 3rem;
+}
+
+.contact .row .contact-form .box{
+    padding:1rem;
+    margin: 0.7rem 0;
+    background: #2E8BC0;
+    color: #fff;
+    font-size: 1rem;
+    width: 100% ;
+    border-radius: 0.6rem;
+}
+
+.contact .row .contact-form .message{
+    height: 10rem;
+    resize: none;
+}
+.contact .row .myinfo .title{
+    text-transform: uppercase;
+    color: #145DA0;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+.contact .row .myinfo .info .anc{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #145DA0;
+    font-weight: normal;
+    padding: 0.8rem 0;
+    text-decoration: none;
+}
+.contact .row .myinfo .info i{
+    padding-right: 1.5rem;
+    color: #145DA0;
+}
+.top{
+    font-size: 2.7rem;
+    color: #145DA0;
+    position: fixed;
+    top: 89%;
+    left:95%;
+}
+
+footer{
+    padding: 1.5rem;
+    background: #145DA0;
+    color: #B1D4E0;
+    text-align: center;
+}
+.alert{
+    background: rgb(36, 172, 36);
+    padding: 1rem;
+    width: 60%;
+    color: #fff;
+    border-radius:2rem;
+    position: fixed;
+    top: 15%;
+    text-align: center;
+    margin: auto;
+    z-index: 100000;
+}
+.alert span{
+    line-height:20px;
+    word-spacing:1px;
+    letter-spacing:0.7px;
+}
+.alert i{
+    font-size:1rem;
+    cursor: pointer;
+    float: right;
+    /* position: absolute;
+    top:37%;
+    left: 82%; */
+}
+/* media queries  */
+@media(max-width:1200px){
+    html{
+       font-size: 85%;
+       overflow-x: hidden;
+    }
+    .home{
+        padding:1rem 3rem;
+    }
+    
+}
+@media(max-width:990px){
+    header{
+       left:-120%;
+    }
+    #menubar{
+        display: block;
+    }
+    header.toggle{
+        left:0%;
+    }
+    /* .home{
+        padding:0 5rem;
+    } */
+    body{
+        padding:0;
+    }
+}
+@media(max-width:768px){
+    html{
+       font-size: 85%;
+    }
+    /* .home{
+        padding:0 2rem;
+    } */
+    .top{
+        top: 88%;
+        left:93%;
+    }
+}
+@media(max-width:400px){
+    header{
+        width:100%;
+     }
+     .myskils .counter .box{
+         width: 100%;
+         margin: 1rem 0;
+     }
+     .aboutme .e-container .boxes{
+        width: 100%;
+     }
+     .aboutme .info{
+        padding:0;
+     }
+     .top{
+        top: 88%;
+        left:88%;
+    }
+    .heading{
+       margin-top: 3rem;
+    }
+    .contact .row .contact-form {
+        padding:2rem 0;
+        
+    }
+    .alert{
+        width: 80%;
+    }
+}
